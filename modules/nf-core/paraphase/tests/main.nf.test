@@ -115,7 +115,7 @@ nextflow_process {
                 input[1] = TABIX_BGZIP.out.output
                 input[2] = [
                     [ id:'test_config' ],
-                    file(params.modules_testdata_base_path + 'generic/config/paraphase_config.yaml', checkIfExists: true),
+                    file("${baseDir}/modules/nf-core/paraphase/tests/config.yaml", checkIfExists: true),
                 ]
                 """
             }
